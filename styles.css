@@ -6,10 +6,13 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
     color: #333;
+    background: linear-gradient(135deg, #f0f4f8 0%, #e7ebee 100%); /* Градиент фона [[9]] */
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .container {
@@ -20,8 +23,8 @@ body {
 
 /* Header */
 .header {
-    background: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background: #3498db;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -35,8 +38,8 @@ body {
 }
 
 .logo-img {
-    height: 50px;
-    border-radius: 8px;
+    height: 60px;
+    border-radius: 10px;
 }
 
 .nav {
@@ -46,14 +49,15 @@ body {
 }
 
 .nav-link {
-    color: #333;
+    color: white;
     text-decoration: none;
     padding: 0.5rem 1rem;
-    transition: color 0.3s;
+    transition: all 0.3s;
 }
 
 .nav-link:hover {
-    color: #3498db;
+    background: rgba(255,255,255,0.1);
+    border-radius: 5px;
 }
 
 .btn {
@@ -75,20 +79,16 @@ body {
     color: white;
 }
 
-.mobile-btn {
-    display: none;
-    background: #3498db;
-    color: white;
-}
-
 /* Main content */
 .hero {
-    padding: 3rem 0;
+    padding: 4rem 0;
+    flex: 1; /* Заполняет всё пространство выше футера [[5]] */
 }
 
 .hero-title {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    color: #2c3e50;
 }
 
 .hero-subtitle {
@@ -101,12 +101,14 @@ body {
     width: 100%;
     max-width: 400px;
     border-radius: 10px;
-    margin: 2rem 0;
+    margin: 2rem auto;
+    display: block;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .alert {
-    background: #fff3cd;
-    border: 1px solid #ffeeba;
+    background: #fff;
+    border-left: 5px solid #e74c3c;
     border-radius: 10px;
     padding: 1.5rem;
     margin: 2rem 0;
@@ -126,6 +128,7 @@ body {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
+    justify-content: center; /* Центрирование кнопок [[4]] */
 }
 
 /* Footer */
@@ -133,13 +136,14 @@ body {
     background: #3498db;
     color: white;
     padding: 2rem 0;
-    margin-top: 3rem;
+    margin-top: auto; /* Прикрепляет футер к низу [[5]] */
 }
 
 .app-store {
     display: flex;
     gap: 1rem;
     margin-top: 1rem;
+    justify-content: center; /* Центрирование иконок [[2]] */
 }
 
 .app-icon {
@@ -148,30 +152,6 @@ body {
 
 /* Mobile */
 @media (max-width: 768px) {
-    .nav {
-        display: none;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        right: 0;
-        background: #fff;
-        flex-direction: column;
-        padding: 1rem;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    
-    .nav.active {
-        display: flex;
-    }
-    
-    .mobile-btn {
-        display: block;
-    }
-    
-    .desktop-btn {
-        display: none;
-    }
-    
     .hero-title {
         font-size: 2rem;
     }
@@ -182,12 +162,5 @@ body {
     
     .app-icon {
         height: 35px;
-    }
-}
-
-/* Tablet */
-@media (min-width: 769px) {
-    .mobile-btn {
-        display: none;
     }
 }
