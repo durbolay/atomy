@@ -1,47 +1,90 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Регистрация в Атоми</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
   <header class="header">
     <div class="container">
       <div class="navbar">
         <div class="logo">
-          <img src="images/atomy.jpg" alt="Атоми" class="logo-img">
+          <img src="images/atomy.jpg" alt="Атоми" class="logo-img"/>
         </div>
         <nav id="main-nav" class="nav" role="navigation">
-          <a href="#" class="nav-link">О компании</a>
-          <a href="#" class="nav-link">Бизнес</a>
-          <a href="#" class="nav-link">Каталог</a>
-          <a href="#" class="nav-link">Информация</a>
-          <a href="#" class="nav-link">Контакты</a>
+          <a href="#about" class="nav-link">О компании</a>
+          <a href="#products" class="nav-link">Продукция</a>
+          <a href="#register" class="nav-link">Регистрация</a>
         </nav>
-        <button class="btn primary desktop-btn">Регистрация</button>
-        <button class="btn mobile-btn"
-                aria-label="Переключить навигацию"
-                aria-controls="main-nav"
-                aria-expanded="false">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
+        <!-- <button class="btn primary desktop-btn">Регистрация</button> -->
+        <button class="btn mobile-btn" aria-label="Переключить навигацию" aria-controls="main-nav" aria-expanded="false">
+          <span class="bar"></span><span class="bar"></span><span class="bar"></span>
         </button>
       </div>
     </div>
   </header>
 
   <main class="main">
-    <section class="hero">
+    <!-- О компании -->
+    <section id="about" class="section">
       <div class="container">
-        <h1 class="hero-title">Регистрация в <span class="accent">Атоми</span></h1>
-        <p class="hero-subtitle">Для покупок или бизнеса с компанией необходимо зарегистрироваться</p>
-        <img src="images/regy.jpg" alt="Регистрация" class="hero-image">
+        <div class="card-section">
+          <h2 class="section-title">О компании</h2>
+          <p class="section-text">
+            Atomy — южнокорейская компания, основанная в 2009 году, специализирующаяся на продаже высококачественных товаров для здоровья, красоты и быта.
+          </p>
+          <p class="section-text">
+            Миссия Atomy — создавать ценность для потребителей, предлагая продукцию премиум-класса по доступным ценам, с возможностью построения бизнеса через партнёрскую программу.
+          </p>
+          <img src="images/regy.jpg" alt="Регистрация" class="hero-image">
+        </div>
+      </div>
+    </section>
+    
+    <!-- Продукция -->
+    <section id="products" class="section">
+      <div class="container">
+        <div class="card-section">
+          <h2 class="section-title">Продукция</h2>
+          <div class="product-grid">
+            <div class="product-card">
+              <img src="images/cosmetics.jpg" alt="КОСМЕТИКА" class="product-image"/>
+              <h3 class="product-name">КОСМЕТИКА</h3>
+              <p class="product-desc">От 1 300 ₽</p>
+              <a href="#register" class="btn secondary">Открыть доступ</a>
+            </div>
+            <div class="product-card">
+              <img src="images/household.jpg" alt="ХОЗЯЙСТВО" class="product-image"/>
+              <h3 class="product-name">ХОЗЯЙСТВО</h3>
+              <p class="product-desc">От 600 ₽</p>
+              <a href="#register" class="btn secondary">Открыть доступ</a>
+            </div>
+            <div class="product-card">
+              <img src="images/food.jpg" alt="ПРОДУКТЫ ПИТАНИЯ" class="product-image"/>
+              <h3 class="product-name">ПРОДУКТЫ ПИТАНИЯ</h3>
+              <p class="product-desc">От 1 200 ₽</p>
+              <a href="#register" class="btn secondary">Открыть доступ</a>
+            </div>
+            <div class="product-card">
+              <img src="images/catalog.jpg" alt="И МНОГОЕ ДРУГОЕ" class="product-image"/>
+              <h3 class="product-name">И МНОГОЕ ДРУГОЕ</h3>
+              <p class="product-desc">От 450 ₽</p>
+              <a href="#register" class="btn secondary">Открыть доступ</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
 
-        <div class="alert">
-          <div class="alert-content">
+    <!-- Регистрация -->
+    <section id="register" class="section">
+      <div class="container">
+        <div class="card-section">
+          <h2 class="section-title">Регистрация</h2>
+          <div class="alert modern-alert">
             <p class="alert-title">Важно:</p>
             <ol class="alert-list">
               <li>Заполните форму при отсутствии аккаунта</li>
@@ -49,22 +92,22 @@
               <li>Аккаунт блокируется при неактивности 6 месяцев</li>
             </ol>
           </div>
-        </div>
-
-        <div class="button-group">
-          <button class="btn secondary">Покупатель</button>
-          <button class="btn secondary">Дистрибьютор</button>
+          <div class="button-group">
+            <button class="btn secondary">Покупатель</button>
+            <button class="btn secondary">Дистрибьютор</button>
+          </div>
         </div>
       </div>
     </section>
+    
   </main>
 
   <footer class="footer">
     <div class="container">
       <p>© AtomyCosmetic.ru 2020-2025</p>
       <div class="app-store">
-        <img src="images/google-play.png" alt="Google Play" class="app-icon">
-        <img src="images/app-store.png" alt="App Store" class="app-icon">
+        <img src="images/google-play.png" alt="Google Play" class="app-icon"/>
+        <img src="images/app-store.png" alt="App Store" class="app-icon"/>
       </div>
     </div>
   </footer>
